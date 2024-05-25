@@ -23,7 +23,7 @@ A simple weather app that shows the current weather conditions and a seven day f
 
 ### Links
 
-[live site URL](https://mayorr-star.github.io/weather_app/)
+- Live Site URL :[live site URL](https://mayorr-star.github.io/Weather_App/)
 
 ## My Process
 
