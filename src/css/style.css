@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    font-size: 16px;
+  }
+  
+  @font-face {
+    font-family: "myFont";
+    src: url(../fonts/ProtestRiot-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "myFont", "Times New Roman", sans-serif;
+    background-image: linear-gradient(to right, #77a1d3, #79cbca, #e684ae);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  /* current day section */
+  
+  #location_input{
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 2px solid #77a1d3;
+    outline: none;
+  }
+  
+  ::placeholder {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  button.search {
+    padding: 3px 7px;
+    border-radius: 3px;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-family: "myFont", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+  
+  main > section.current_day {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    padding: 30px;
+  }
+  
+  .main_info > .header > .location,
+  .temp_info {
+    font-size: 3rem;
+  }
+  
+  span.date,
+  span.time {
+    font-size: 1.5rem;
+  }
+  
+  .temp_details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .temp_details > .text_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .temp_details > .text,
+  .date_info > .date,
+  .time_info > .time {
+    font-size: 1.3rem;
+  }
+  
+  .temp_details > .temp {
+    text-align: center;
+  }
+  
+  .main_info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .current_day > .weather_data span {
+    display: block;
+  }
+  .weather_details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .weather_details > .icon {
+    width: 1.1rem;
+  }
+  
+  .weather_details > .data > .header {
+    font-size: 1rem;
+  }
+  
+  .weather_details > .data {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+  }
+  
+  .weather_data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .time_info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 6px;
+  }
+  
+  .date_info {
+    text-align: center;
+  }
+  
+  .toggleContainer {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+    border: 3px solid #2a52be;
+    border-radius: 20px;
+    background: #2a52be;
+    font-weight: bold;
+    color: #2a52be;
+    cursor: pointer;
+  }
+  .toggleContainer::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0%;
+    border-radius: 20px;
+    background: white;
+    transition: all 0.3s;
+  }
+  .toggleCheckbox:checked + .toggleContainer::before {
+    left: 50%;
+  }
+  .toggleContainer div {
+    padding: 6px;
+    text-align: center;
+    z-index: 1;
+  }
+  .toggleCheckbox {
+    display: none;
+  }
+  .toggleCheckbox:checked + .toggleContainer div:first-child {
+    color: white;
+    transition: color 0.3s;
+  }
+  .toggleCheckbox:checked + .toggleContainer div:last-child {
+    color: #2a52be;
+    transition: color 0.3s;
+  }
+  .toggleCheckbox + .toggleContainer div:first-child {
+    color: #2a52be;
+    transition: color 0.3s;
+  }
+  .toggleCheckbox + .toggleContainer div:last-child {
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .form_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+  }
+  
+  /* current day section */
+  
+  /* forecast setion */
+  
+  .forecast {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: rgb(255, 255, 255);
+  }
+  
+  .forecast > .main_content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 30px;
+    color: rgb(255, 255, 255);
+    gap: 15px;
+  }
+  
+  .day_card {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 7px;
+    text-align: center;
+    padding: 3px;
+    box-shadow: 0 0 5px 2px rgb(255, 255, 255);
+  }
+  
+  .day_card h3 {
+    margin-bottom: 12px;
+  }
+  
+  .forecast > .header {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  .condition_wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* forecast setion */
+  
