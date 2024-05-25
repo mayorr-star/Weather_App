@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER APP</title>
+  </head>
+  <body>
+    <div class="main_wrapper">
+      <main>
+        <section class="current_day">
+          <div class="form_wrapper">
+            <form action="#" method="#">
+              <label for="location">Location:</label>
+              <input
+                type="text"
+                name="location"
+                id="location_input"
+                placeholder="Search location"
+              />
+              <button type="submit" class="search" id="search">Search</button>
+            </form>
+            <input type="checkbox" id="toggle" class="toggleCheckbox" />
+            <label for="toggle" class="toggleContainer">
+              <div>Celcius</div>
+              <div>Fahrenheit</div>
+            </label>
+          </div>
+          <div class="main_info">
+            <div class="header">
+              <span class="city location"></span>
+              <span class="country location"></span>
+            </div>
+            <div class="temp_details">
+              <span class="temp temp_info celcius"></span>
+              <div class="text_container">
+                <img src="" alt="weather_condition" id="weather_image" />
+                <span class="text temp_info"></span>
+              </div>
+            </div>
+            <div class="time_info">
+              <span class="time"></span>
+              <span class="lastupdated"></span>
+            </div>
+          </div>
+          <div class="weather_data">
+            <div class="feelslike_container weather_details">
+              <div class="icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  shape-rendering="geometricPrecision"
+                  text-rendering="geometricPrecision"
+                  image-rendering="optimizeQuality"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  viewBox="0 0 131.24 260.79"
+                >
+                  <path
+                    d="M79.21 99.95V31.54c0-5.73-2.35-10.94-6.13-14.73-3.78-3.78-9-6.13-14.73-6.13s-10.94 2.35-14.73 6.13c-3.78 3.79-6.13 9-6.13 14.73V163.1c-14.45 7.41-24.33 22.46-24.33 39.82 0 24.69 20.01 44.71 44.71 44.71s44.72-20.02 44.72-44.71c0-16.97-9.45-31.73-23.38-39.31V99.95zm-12.23 71.36c13.73 3.95 23.78 16.6 23.78 31.61 0 18.16-14.72 32.88-32.89 32.88-18.16 0-32.89-14.72-32.89-32.88 0-15.01 10.05-27.66 23.79-31.61V55.52c0-11.31 18.21-10.86 18.21 0v115.79zm34.19-134.88v-9.68h25.23c2.67 0 4.84 2.16 4.84 4.84 0 2.67-2.17 4.84-4.84 4.84h-25.23zm0 26.43v-9.68h25.23c2.67 0 4.84 2.17 4.84 4.84s-2.17 4.84-4.84 4.84h-25.23zm0 26.43v-9.68h25.23c2.67 0 4.84 2.17 4.84 4.84s-2.17 4.84-4.84 4.84h-25.23zm0 26.43v-9.68h25.23c2.67 0 4.84 2.17 4.84 4.84s-2.17 4.84-4.84 4.84h-25.23zm0 26.43v-9.68h25.23c2.67 0 4.84 2.17 4.84 4.84 0 2.68-2.17 4.84-4.84 4.84h-25.23zM89.9 154.71c15.58 10.37 25.84 28.09 25.84 48.21 0 31.96-25.91 57.87-57.87 57.87C25.91 260.79 0 234.88 0 202.92c0-20.53 10.69-38.57 26.81-48.84V31.54c0-8.68 3.55-16.56 9.26-22.28C41.79 3.55 49.67 0 58.35 0c8.68 0 16.57 3.55 22.28 9.26 5.72 5.72 9.27 13.6 9.27 22.28v123.17z"
+                  />
+                </svg>
+              </div>
+              <div class="data">
+                <span class="header">Feels like</span>
+                <span class="feelslike"></span>
+              </div>
+            </div>
+            <div class="humidity_container weather_details">
+              <div class="icon">
+                <svg
+                  id="Layer_1"
+                  data-name="Layer 1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 103.36 122.88"
+                >
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill-rule: evenodd;
+                      }
+                    </style>
+                  </defs>
+                  <title>water</title>
+                  <path
+                    class="cls-1"
+                    d="M64.66,7.48c7.83,33.51,38.7,57.89,38.7,77.66,0,47.88-70,50.2-76.82,6.94a31.53,31.53,0,0,1-15-4.93,24.91,24.91,0,0,1-8.26-9.08A28.3,28.3,0,0,1,.05,66.14c-.44-8.2,2.19-17.44,8-26.24l3.29-4.85c6.51-9.53,13.93-20.38,16.8-32.82a2.87,2.87,0,0,1,5.6,0C36.67,14.6,44.08,25.45,50.59,35l1.33,2c5.43-9,10.26-18.72,12.74-29.46ZM26,86.26c0-.38,0-.74,0-1.12C26,72.88,37.75,59,48.59,42.27l-2.75-4.05c-5.23-7.67-11-16.16-14.85-25.8-3.81,9.7-9.62,18.19-14.86,25.87l-3.25,4.79c-5.15,7.74-7.47,15.75-7.1,22.77a22.57,22.57,0,0,0,2.55,9.52,19.25,19.25,0,0,0,6.37,7A25.53,25.53,0,0,0,26,86.26Zm15.08-6.77a3.92,3.92,0,0,1,7.81-.71,37.8,37.8,0,0,0,3.81,14.16A25,25,0,0,0,62.5,103a3.92,3.92,0,1,1-4,6.76A32.68,32.68,0,0,1,45.78,96.6a45.8,45.8,0,0,1-4.67-17.11Z"
+                  />
+                </svg>
+              </div>
+              <div class="data">
+                <span class="header">Humidity</span>
+                <span class="humidity"></span>
+              </div>
+            </div>
+            <div class="windspeed_container weather_details">
+              <div class="icon">
+                <?xml version="1.0" encoding="utf-8"?><svg
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 122.88 74.78"
+                  style="enable-background: new 0 0 122.88 74.78"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M28.69,53.38c-1.61,0-2.91-1.3-2.91-2.91c0-1.61,1.3-2.91,2.91-2.91h51.37c0.21,0,0.42,0.02,0.62,0.07 c1.84,0.28,3.56,0.8,5.1,1.63c1.7,0.92,3.15,2.19,4.27,3.89c3.85,5.83,3.28,11.24,0.56,15.24c-1.77,2.61-4.47,4.55-7.45,5.57 c-3,1.03-6.32,1.13-9.32,0.03c-4.54-1.66-8.22-5.89-8.76-13.55c-0.11-1.6,1.1-2.98,2.7-3.09c1.6-0.11,2.98,1.1,3.09,2.7 c0.35,4.94,2.41,7.56,4.94,8.48c1.71,0.62,3.67,0.54,5.48-0.08c1.84-0.63,3.48-1.79,4.52-3.32c1.49-2.19,1.71-5.28-0.61-8.79 c-0.57-0.86-1.31-1.51-2.18-1.98c-0.91-0.49-1.97-0.81-3.13-0.99H28.69L28.69,53.38z M15.41,27.21c-1.61,0-2.91-1.3-2.91-2.91 c0-1.61,1.3-2.91,2.91-2.91h51.21c1.17-0.18,2.23-0.5,3.14-0.99c0.87-0.47,1.61-1.12,2.18-1.98c2.32-3.51,2.09-6.6,0.61-8.79 c-1.04-1.53-2.68-2.69-4.52-3.32c-1.81-0.62-3.78-0.7-5.48-0.08c-2.52,0.92-4.59,3.54-4.94,8.48c-0.11,1.6-1.49,2.81-3.09,2.7 c-1.6-0.11-2.81-1.49-2.7-3.09c0.54-7.66,4.22-11.89,8.76-13.55c3-1.09,6.32-0.99,9.32,0.03c2.98,1.02,5.68,2.97,7.45,5.57 c2.72,4,3.29,9.41-0.56,15.24c-1.12,1.7-2.57,2.97-4.27,3.89c-1.54,0.83-3.26,1.35-5.1,1.63c-0.2,0.04-0.41,0.07-0.62,0.07H15.41 L15.41,27.21z M2.91,40.3C1.3,40.3,0,38.99,0,37.39c0-1.61,1.3-2.91,2.91-2.91h107.07c1.17-0.18,2.23-0.5,3.13-0.99 c0.87-0.47,1.61-1.12,2.18-1.98c2.32-3.51,2.09-6.6,0.61-8.79c-1.04-1.53-2.68-2.69-4.52-3.32c-1.81-0.62-3.78-0.7-5.48-0.08 c-2.52,0.92-4.59,3.54-4.94,8.48c-0.11,1.6-1.49,2.81-3.09,2.7c-1.6-0.11-2.81-1.49-2.7-3.09c0.54-7.66,4.22-11.89,8.76-13.55 c3-1.09,6.32-0.99,9.32,0.03c2.98,1.02,5.68,2.97,7.45,5.57c2.72,4,3.29,9.41-0.56,15.24c-1.12,1.7-2.57,2.97-4.27,3.89 c-1.54,0.83-3.26,1.35-5.1,1.63c-0.2,0.04-0.41,0.07-0.62,0.07H2.91L2.91,40.3z"
+                    />
+                  </g>
+                </svg>
+              </div>
+              <div class="data">
+                <span class="header">Wind Speed</span>
+                <span class="windspeed"></span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="forecast">
+          <h2 class="header">Forecast</h2>
+          <div class="main_content"></div>
+        </section>
+        <section class="forecast">
+          <h2 class="header">Forecast</h2>
+          <div class="main_content"></div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
